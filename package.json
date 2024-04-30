@@ -1,0 +1,28 @@
+{
+  "name": "@palmdevs/website",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "NODE_ENV=development vinxi dev",
+    "build": "NODE_ENV=production vinxi build",
+    "start": "vinxi start",
+    "version": "vinxi version",
+    "format": "biome check --apply ."
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.2",
+    "@solidjs/router": "^0.13.1",
+    "@solidjs/start": "^1.0.0-rc.0",
+    "solid-js": "^1.8.16",
+    "vinxi": "0.3.10",
+    "vite-plugin-solid-svg": "^0.8.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "sass": "^1.74.1"
+  },
+  "trustedDependencies": ["@biomejs/biome", "esbuild"]
+}

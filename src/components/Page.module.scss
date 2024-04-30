@@ -1,0 +1,92 @@
+@use "../styles/queries";
+
+:global(main) {
+  @media not (prefers-reduced-motion: reduce) {
+    animation: slideFadeIn var(---duration-medium) var(--easing);
+  }
+}
+
+:global(#content) {
+  padding: var(--gap-larger);
+
+  // Mobile will have larger padding so it isn't as close to screen edges
+  @media (max-width: queries.$mw-mobile) {
+    padding: var(--gap-large);
+  }
+
+  align-items: stretch;
+}
+
+// TODO: Put these as a constant?
+.Section {
+  max-width: 40rem;
+  padding-block: min(4vh, var(--gap-larger));
+}
+
+.FH-Row, .FH-Col {
+  display: flex;
+}
+
+.FH-Col {
+  flex-direction: column;
+}
+
+.FH-FW {
+  flex-wrap: wrap;
+}
+
+.FH-FF {
+  flex: 1;
+}
+
+.FH-JC {
+  justify-content: center;
+}
+
+.FH-AC {
+  align-items: center;
+}
+
+.G-xs {
+  gap: var(--gap-smaller);
+}
+
+.G-sm {
+  gap: var(--gap-small);
+}
+
+.G-md {
+  gap: var(--gap-medium);
+}
+
+.G-lg {
+  gap: var(--gap-large);
+}
+
+.G-xl {
+  gap: var(--gap-larger);
+}
+
+.G-xxl {
+  gap: var(--gap-very-large);
+}
+
+.G-xxxl {
+  gap: var(--gap-insanely-large);
+}
+
+.G-rsm {
+  gap: var(--gap-relative-small);
+}
+
+.G-rxs {
+  gap: var(--gap-relative-smaller);
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    // TODO: Put this as a constant?
+    transform: translateY(4rem);
+  }
+}
