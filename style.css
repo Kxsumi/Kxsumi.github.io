@@ -1,0 +1,134 @@
+<style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+                background-color: #0e1114; /* Dark blue background */
+            }
+    
+            .navbar {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+    
+            .navbar a {
+                color: #f2f2f2;
+                padding: 12px 14px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 16px; /* Rounded corners */
+                font-family: "Inter", sans-serif;
+            }
+    
+            .navbar a[href="#home"] {
+                background-color: #1b202c; /* Highlight for Home tab */
+            }
+    
+            .navbar a[href="#home"]:hover {
+                background-color: #1b202c; /* No color change on hover for Home tab */
+            }
+    
+            .dropdown {
+                position: absolute;
+                right: 0;
+            }
+    
+            .dropdown .dropbtn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+                border-radius: 12px; /* Rounded corners */
+                margin-right: 10px;
+                font-family: "Inter", sans-serif;
+            }
+            
+            .navbar a:not([href="#home"]):hover, .dropdown:hover .dropbtn {
+                background-color: #1b202c;
+            }
+    
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: #151922;
+                min-width: 120px;
+                width: 100%;
+                max-width: 120px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                border-radius: 14px;
+                font-family: "Inter", sans-serif;
+                margin-right: 10px;
+            }
+    
+            .dropdown-content a {
+                padding: 14px 16px;
+                padding-left: 10px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                justify-content: left;
+                font-family: "Inter", sans-serif;
+                
+            }
+    
+            .dropdown-content a:hover {
+                background-color: #1b202c;
+                color: white;
+            }
+    
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+    
+            .center-text {
+                text-align: center;
+                color: white;
+                font-family: "Inter", sans-serif;
+                margin-top: 70px;
+                font-size: 30px;
+                transition: all 2s;
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            
+            .center-text.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            .gradient-text {
+                color: #f2f2f2; /* Fallback color */
+                background: linear-gradient(to right, #57b7d9, #51e0b3);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 55px;
+            }
+    
+            h3 {
+                font-weight: normal; /* Removes bold */
+                margin: 10px 0; /* Reduces vertical separation */
+                font-size: 20px;
+            }
+            
+            .button {
+                display: inline-block;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                background: url('your_image_url_here');
+                background-size: cover;
+                text-align: center;
+                color: white;
+                line-height: 100px;
+                text-decoration: none;
+            }
+
+        </style>
