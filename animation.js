@@ -6,3 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     observer.observe(document.querySelector('.center-text'));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPage = window.location.pathname;
+  const navLinks = document.querySelectorAll('.navbar a');
+
+  navLinks.forEach((link) => {
+    if (link.href.includes(currentPage)) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
